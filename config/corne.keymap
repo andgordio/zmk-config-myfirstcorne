@@ -10,12 +10,14 @@
 
 / {
         behaviors {
-                ht: hold_tap {
+                ht_custom: behavior_hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        flavor = "balanced";        // or "hold-preferred", "tap-preferred"
+                        flavor = "balanced";
                         tapping-term-ms = <150>;
-                        quick-tap-ms = <80>;        // optional
+
+                        // REQUIRED: forward to core behavior
+                        bindings = <&hold_tap>;
                 };
         };
 
