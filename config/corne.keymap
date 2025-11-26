@@ -10,12 +10,15 @@
 
 / {
         behaviors {
-                hold_tap {
+                ht: hold_tap {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
+                        flavor = "balanced";        // or "hold-preferred", "tap-preferred"
                         tapping-term-ms = <150>;
+                        quick-tap-ms = <80>;        // optional
                 };
         };
+
 
         keymap {
                 compatible = "zmk,keymap";
