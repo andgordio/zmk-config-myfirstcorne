@@ -9,19 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        behaviors {
-                ht_custom: behavior_hold_tap {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        flavor = "balanced";
-                        tapping-term-ms = <150>;
-
-                        // REQUIRED: forward to core behavior
-                        bindings = <&hold_tap>;
-                };
-        };
-
-
         keymap {
                 compatible = "zmk,keymap";
 
